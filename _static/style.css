@@ -1,8 +1,7 @@
 /* GEICO INSURANCE - ELITE PERFORMANCE STYLESHEET 
-   Optimized for GitHub Pages & ReadTheDocs 2026
+   Version: 2026.2 - Optimized for Full-Width Layouts
 */
 
-/* 1. VARIABLE DEFINITIONS */
 :root {
     --geico-blue: #002f5a;
     --geico-blue-dark: #001f3d;
@@ -13,38 +12,41 @@
     --bg-light: #f8fafc;
     --transition-standard: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     
-    /* Fixed visibility for RTD sidebar overlap */
+    /* Optimized offsets for RTD (ReadTheDocs) environments */
     --chat-right-offset: 1.5rem;
-    --chat-bottom-offset: 6rem; 
+    --chat-bottom-offset: 6.5rem; 
 }
 
-/* 2. CORE DEFAULTS & OVERRIDES */
+/* 1. LAYOUT FIX: REMOVE BLANK SIDE SPACES */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    color: var(--geico-text-main);
-    line-height: 1.6;
-    overflow-x: hidden;
+body, html {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevents horizontal scroll on mobile */
     background-color: var(--bg-light);
 }
 
-/* 3. BRAND CLASSES (RTD PROTECTION) */
-/* Added !important to ensure ReadTheDocs doesn't turn your background white */
-.geico-blue { 
-    background-color: var(--geico-blue) !important; 
+/* Force sections to take up 100% of the browser width */
+section {
+    width: 100% !important;
+    max-width: 100% !important;
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
 }
 
-.geico-blue-text { 
-    color: var(--geico-blue) !important; 
+/* 2. BRAND CLASSES (RTD PROTECTION) */
+.geico-blue { 
+    background-color: var(--geico-blue) !important; 
+    /* Ensures background color reaches the edges */
+    box-shadow: 0 0 0 100vmax var(--geico-blue);
+    clip-path: inset(0 -100vmax);
 }
 
 .text-white { 
@@ -56,27 +58,25 @@ body {
     transition: var(--transition-standard);
 }
 
-.geico-accent:hover {
-    filter: brightness(1.1);
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px -5px rgba(91, 163, 43, 0.4);
+/* 3. SMART CHATBOT UI (Fixed Z-Index Layering) */
+#chat-btn {
+    z-index: 10001 !important; /* Higher than RTD elements */
 }
 
-/* 4. SMART CHATBOT UI (Visible Above RTD Footer) */
 #chat-window {
-    position: absolute;
-    bottom: calc(var(--chat-bottom-offset) + 1rem);
-    right: 0;
+    position: fixed !important; /* Fixed ensures it stays visible during scroll */
+    bottom: var(--chat-bottom-offset);
+    right: var(--chat-right-offset);
     width: 350px;
     height: 500px;
-    z-index: 1000;
+    z-index: 10000;
     transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transform: translateY(40px) scale(0.95);
     opacity: 0;
     pointer-events: none;
     background: #ffffff;
-    border-radius: 1rem;
-    box-shadow: 0 25px 50px -12px rgba(0, 47, 90, 0.3);
+    border-radius: 1.5rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 47, 90, 0.4);
 }
 
 #chat-window.active {
@@ -85,67 +85,42 @@ body {
     pointer-events: auto;
 }
 
-/* 5. SERVICE CARDS: ENHANCED INTERACTION */
+/* 4. SERVICE CARDS: ENTERPRISE INTERACTION */
 .service-card {
     transition: var(--transition-standard);
     background: #ffffff !important;
     border: 1px solid #e2e8f0;
-    cursor: pointer;
+    border-radius: 1.25rem;
 }
 
 .service-card:hover {
     transform: translateY(-8px);
     border-color: var(--geico-green) !important;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08);
 }
 
-/* 6. FAQ ACCORDION (SEO OPTIMIZED) */
+/* 5. FAQ STYLING */
 details {
     background: white;
-    transition: var(--transition-standard);
-    border-radius: 0.75rem;
+    border: 1px solid #e2e8f0;
+    margin-bottom: 1rem;
 }
 
 details[open] {
     border: 2px solid var(--geico-green);
-    transform: scale(1.01);
 }
 
-summary {
-    list-style: none;
-    padding: 1rem;
-    font-weight: 700;
-}
-
-summary::-webkit-details-marker {
-    display: none;
-}
-
-/* 7. REFINEMENTS */
-#chat-content::-webkit-scrollbar {
-    width: 6px;
-}
-
-#chat-content::-webkit-scrollbar-thumb {
-    background-color: #cbd5e1;
-    border-radius: 10px;
-}
-
-/* 8. MOBILE & RTD OVERRIDE (Technical SEO) */
+/* 6. MOBILE & RESPONSIVE FIXES */
 @media (max-width: 768px) {
     #chat-window {
-        width: 85vw;
-        right: 0;
-        bottom: 5rem;
+        width: 90vw;
+        right: 5vw;
+        bottom: 5.5rem;
     }
     
+    /* Ensures typography scales without breaking layout */
     h1 {
-        font-size: 2.5rem !important;
-        line-height: 1.2 !important;
-    }
-    
-    .max-w-7xl {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
+        font-size: 2.25rem !important;
+        line-height: 1.1 !important;
     }
 }

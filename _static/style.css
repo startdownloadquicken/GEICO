@@ -1,9 +1,8 @@
-/* GEICO INSURANCE - PROFESSIONAL LANDING PAGE STYLESHEET
-   Version: 2026.1
-   Focus: Performance, Accessibility, and Technical SEO
+/* GEICO INSURANCE - ELITE PERFORMANCE STYLESHEET 
+   Optimized for GitHub Pages & ReadTheDocs 2026
 */
 
-/* 1. VARIABLE DEFINITIONS (Brand Standards) */
+/* 1. VARIABLE DEFINITIONS */
 :root {
     --geico-blue: #002f5a;
     --geico-blue-dark: #001f3d;
@@ -13,9 +12,13 @@
     --geico-text-muted: #64748b;
     --bg-light: #f8fafc;
     --transition-standard: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Fixed visibility for RTD sidebar overlap */
+    --chat-right-offset: 1.5rem;
+    --chat-bottom-offset: 6rem; 
 }
 
-/* 2. CORE DEFAULTS */
+/* 2. CORE DEFAULTS & OVERRIDES */
 * {
     margin: 0;
     padding: 0;
@@ -27,32 +30,52 @@ html {
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     color: var(--geico-text-main);
     line-height: 1.6;
     overflow-x: hidden;
+    background-color: var(--bg-light);
 }
 
-/* 3. UTILITY & BRAND CLASSES */
-.geico-blue { background-color: var(--geico-blue); }
-.geico-blue-text { color: var(--geico-blue); }
+/* 3. BRAND CLASSES (RTD PROTECTION) */
+/* Added !important to ensure ReadTheDocs doesn't turn your background white */
+.geico-blue { 
+    background-color: var(--geico-blue) !important; 
+}
+
+.geico-blue-text { 
+    color: var(--geico-blue) !important; 
+}
+
+.text-white { 
+    color: #ffffff !important; 
+}
+
 .geico-accent { 
-    background-color: var(--geico-green); 
+    background-color: var(--geico-green) !important; 
     transition: var(--transition-standard);
 }
 
 .geico-accent:hover {
-    background-color: var(--geico-green-light);
+    filter: brightness(1.1);
     transform: translateY(-2px);
     box-shadow: 0 10px 20px -5px rgba(91, 163, 43, 0.4);
 }
 
-/* 4. CHATBOT ARCHITECTURE (The Gecko Assistant) */
+/* 4. SMART CHATBOT UI (Visible Above RTD Footer) */
 #chat-window {
+    position: absolute;
+    bottom: calc(var(--chat-bottom-offset) + 1rem);
+    right: 0;
+    width: 350px;
+    height: 500px;
+    z-index: 1000;
     transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transform: translateY(40px) scale(0.95);
     opacity: 0;
     pointer-events: none;
+    background: #ffffff;
+    border-radius: 1rem;
     box-shadow: 0 25px 50px -12px rgba(0, 47, 90, 0.3);
 }
 
@@ -62,75 +85,67 @@ body {
     pointer-events: auto;
 }
 
-/* Message Bubble Styling */
-.message-appear {
-    animation: bubbleIn 0.3s ease-out forwards;
-}
-
-@keyframes bubbleIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* 5. SERVICE CARDS & HOVER EFFECTS */
+/* 5. SERVICE CARDS: ENHANCED INTERACTION */
 .service-card {
     transition: var(--transition-standard);
-    background: #ffffff;
+    background: #ffffff !important;
     border: 1px solid #e2e8f0;
+    cursor: pointer;
 }
 
 .service-card:hover {
     transform: translateY(-8px);
-    border-color: var(--geico-green);
+    border-color: var(--geico-green) !important;
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
 }
 
-/* 6. FAQ (ACCORDION) STYLING */
-details summary::-webkit-details-marker {
-    display: none;
-}
-
+/* 6. FAQ ACCORDION (SEO OPTIMIZED) */
 details {
+    background: white;
     transition: var(--transition-standard);
+    border-radius: 0.75rem;
 }
 
 details[open] {
-    border-color: var(--geico-green);
-    ring: 2px solid var(--geico-green);
+    border: 2px solid var(--geico-green);
+    transform: scale(1.01);
 }
 
-details summary {
-    outline: none;
+summary {
+    list-style: none;
+    padding: 1rem;
+    font-weight: 700;
 }
 
-/* 7. HERO SECTION CUSTOMIZATIONS */
-#hero-zip {
-    transition: ring 0.2s ease;
+summary::-webkit-details-marker {
+    display: none;
 }
 
-#hero-zip:focus {
-    ring: 3px solid var(--geico-green);
+/* 7. REFINEMENTS */
+#chat-content::-webkit-scrollbar {
+    width: 6px;
 }
 
-/* 8. FOOTER ENHANCEMENTS */
-footer a {
-    transition: color 0.2s ease;
+#chat-content::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1;
+    border-radius: 10px;
 }
 
-footer a:hover {
-    color: #ffffff;
-    text-decoration: underline;
-}
-
-/* 9. RESPONSIVE BREAKPOINTS (Technical SEO Performance) */
+/* 8. MOBILE & RTD OVERRIDE (Technical SEO) */
 @media (max-width: 768px) {
     #chat-window {
-        width: 90vw;
-        right: 5vw;
-        bottom: 85px;
+        width: 85vw;
+        right: 0;
+        bottom: 5rem;
     }
     
     h1 {
         font-size: 2.5rem !important;
+        line-height: 1.2 !important;
+    }
+    
+    .max-w-7xl {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
     }
 }

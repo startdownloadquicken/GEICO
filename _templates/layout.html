@@ -3,23 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GEICO Insurance | Save 15% or More on Auto, Home & Business</title>
-    <meta name="description" content="Get a fast, free GEICO insurance quote. Save on auto, homeowners, renters, and more. Trusted by 28 million+ drivers with 24/7 support.">
+    <title>GEICO Insurance | Official 2026 Quote Portal</title>
+    <meta name="description" content="Get a fast, free GEICO insurance quote. Save on auto, homeowners, and more with 24/7 digital support.">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="_static/style.css">
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "InsuranceAgency",
-      "name": "GEICO Insurance",
-      "url": "https://yourdomain.com",
-      "telephone": "+1-800-841-3000"
-    }
-    </script>
 </head>
 <body class="bg-slate-50 text-slate-900">
 
@@ -30,7 +19,8 @@
                     <span class="text-3xl font-extrabold geico-blue-text italic tracking-tighter">GEICO</span>
                 </div>
                 <div class="hidden md:flex space-x-8 font-medium text-slate-600">
-                    <a href="#services" class="hover:text-blue-700 transition">Insurance Types</a>
+                    <a href="#services" class="hover:text-blue-700 transition">Insurance</a>
+                    <a href="#benefits" class="hover:text-blue-700 transition">Benefits</a>
                     <a href="#faq" class="hover:text-blue-700 transition">Support</a>
                 </div>
                 <div>
@@ -43,41 +33,61 @@
     <section class="geico-blue text-white py-20 lg:py-32 overflow-hidden relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="lg:w-1/2">
-                <h1 class="text-5xl lg:text-7xl font-extrabold leading-tight mb-6">
+                <h1 class="text-5xl lg:text-7xl font-extrabold leading-tight mb-6 !text-white">
                     15 Minutes Could Save You <span class="text-green-400">15% or More.</span>
                 </h1>
                 <p class="text-xl text-blue-100 mb-10 max-w-lg">
-                    Experience the 2026 standard of insurance. Fast, digital-first, and backed by Berkshire Hathaway's financial strength.
+                    Join over 28 million policyholders who trust the Gecko for fast, reliable, and affordable coverage.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <input type="text" placeholder="Enter Zip Code" class="px-6 py-4 rounded-lg text-slate-900 w-full sm:w-64 focus:outline-none">
-                    <button class="geico-accent text-white px-8 py-4 rounded-lg font-bold text-lg hover:scale-105 transition-transform">Get My Quote</button>
+                    <input type="text" placeholder="Enter Zip Code" class="px-6 py-4 rounded-lg text-slate-900 w-full sm:w-64 focus:ring-4 focus:ring-green-500 outline-none">
+                    <button class="geico-accent text-white px-8 py-4 rounded-lg font-bold text-lg hover:scale-105 transition-transform">Start Saving</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="benefits" class="py-20 bg-slate-100 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <h2 class="text-4xl font-bold geico-blue-text mb-6">The GEICO Mobile App</h2>
+                    <p class="text-lg text-slate-600 mb-6 italic">"The simplest way to manage your insurance."</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 font-semibold text-slate-700">✅ View Digital ID Cards instantly</li>
+                        <li class="flex items-center gap-3 font-semibold text-slate-700">✅ One-tap Roadside Assistance</li>
+                        <li class="flex items-center gap-3 font-semibold text-slate-700">✅ Easy Bill Pay & Policy Updates</li>
+                    </ul>
+                </div>
+                <div class="md:w-1/2 bg-white p-6 rounded-3xl shadow-2xl border-4 border-slate-200">
+                    <div class="text-center font-bold text-slate-400 uppercase tracking-widest mb-4">Live Preview 2026</div>
+                    <div class="h-64 bg-slate-50 rounded-xl flex items-center justify-center text-slate-300">
+                        [Mobile Interface Placeholder]
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="services" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold geico-blue-text mb-4">Insurance for Everything You Move and Own</h2>
-                <div class="h-1 w-20 bg-green-500 mx-auto"></div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                <div class="service-card p-8 border border-slate-100 rounded-2xl bg-slate-50">
-                    <div class="text-4xl mb-4">🚗</div>
-                    <h3 class="text-xl font-bold mb-2">Vehicle Insurance</h3>
-                    <p class="text-slate-600">Auto, Motorcycle, RV, and Boat coverage tailored to you.</p>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold geico-blue-text mb-16">Insurance for Everything You Move and Own</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="service-card p-6 border rounded-2xl hover:border-green-500 transition shadow-sm">
+                    <div class="text-4xl mb-3">🚗</div>
+                    <h3 class="font-bold">Auto</h3>
                 </div>
-                <div class="service-card p-8 border border-slate-100 rounded-2xl bg-slate-50">
-                    <div class="text-4xl mb-4">🏠</div>
-                    <h3 class="text-xl font-bold mb-2">Property Insurance</h3>
-                    <p class="text-slate-600">Homeowners, Renters, and Condo insurance to protect your home.</p>
+                <div class="service-card p-6 border rounded-2xl hover:border-green-500 transition shadow-sm">
+                    <div class="text-4xl mb-3">🏠</div>
+                    <h3 class="font-bold">Home</h3>
                 </div>
-                <div class="service-card p-8 border border-slate-100 rounded-2xl bg-slate-50">
-                    <div class="text-4xl mb-4">💼</div>
-                    <h3 class="text-xl font-bold mb-2">Business Insurance</h3>
-                    <p class="text-slate-600">Professional liability and workers' compensation for your business.</p>
+                <div class="service-card p-6 border rounded-2xl hover:border-green-500 transition shadow-sm">
+                    <div class="text-4xl mb-3">🏍️</div>
+                    <h3 class="font-bold">Motorcycle</h3>
+                </div>
+                <div class="service-card p-6 border rounded-2xl hover:border-green-500 transition shadow-sm">
+                    <div class="text-4xl mb-3">🐶</div>
+                    <h3 class="font-bold">Pet</h3>
                 </div>
             </div>
         </div>
@@ -85,64 +95,80 @@
 
     <section id="faq" class="py-24 bg-slate-50">
         <div class="max-w-4xl mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center geico-blue-text mb-12">Frequently Asked Questions</h2>
+            <h2 class="text-4xl font-bold text-center geico-blue-text mb-12">Support & FAQ</h2>
             <div class="space-y-4">
-                <details class="group bg-white rounded-xl shadow-sm border border-slate-200 p-6" open>
+                <details class="group bg-white rounded-xl border p-6" open>
                     <summary class="list-none flex justify-between items-center cursor-pointer font-bold text-lg">
-                        How do I file a claim?
-                        <span class="group-open:rotate-180 transition-transform">▼</span>
+                        How do I track my claim status?
+                        <span class="group-open:rotate-180 transition">▼</span>
                     </summary>
-                    <p class="mt-4 text-slate-600">Use the GEICO Mobile app or website. Available 24/7.</p>
+                    <p class="mt-4 text-slate-600">Log into the GEICO Mobile app or website to see real-time repair updates and adjuster notes.</p>
                 </details>
-                <details class="group bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+                <details class="group bg-white rounded-xl border p-6">
                     <summary class="list-none flex justify-between items-center cursor-pointer font-bold text-lg">
-                        What discounts are available?
-                        <span class="group-open:rotate-180 transition-transform">▼</span>
+                        Is Emergency Roadside Service included?
+                        <span class="group-open:rotate-180 transition">▼</span>
                     </summary>
-                    <p class="mt-4 text-slate-600">Good Student, Military, Federal Employee, and Multi-Policy discounts.</p>
+                    <p class="mt-4 text-slate-600">Yes, it can be added to your policy for pennies a day, covering jump-starts, tire changes, and towing.</p>
                 </details>
             </div>
         </div>
     </section>
 
-    <div class="fixed bottom-6 right-6 z-[100]">
-        <button id="chat-btn" onclick="toggleChat()" class="geico-accent w-16 h-16 rounded-full shadow-2xl flex items-center justify-center">
+    <div class="fixed bottom-24 right-6 z-[100]"> <button id="chat-btn" onclick="toggleChat()" class="geico-accent w-16 h-16 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition">
             <span class="text-white text-3xl">💬</span>
         </button>
         <div id="chat-window" class="absolute bottom-20 right-0 w-[350px] bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col h-[500px]">
             <div class="geico-blue p-5 text-white flex justify-between items-center">
-                <span class="font-bold">Gecko Assistant</span>
+                <div class="flex items-center gap-2">
+                    <div class="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+                    <span class="font-bold">Gecko Assistant</span>
+                </div>
                 <button onclick="toggleChat()" class="text-2xl">×</button>
             </div>
-            <div id="chat-content" class="flex-1 p-4 overflow-y-auto bg-slate-50 space-y-4">
-                <div class="bg-white p-3 rounded-2xl shadow-sm text-sm">Hi! Ask me anything about GEICO policies!</div>
+            <div id="chat-content" class="flex-1 p-4 overflow-y-auto bg-slate-50 space-y-4 flex flex-col">
+                <div class="bg-white p-3 rounded-2xl rounded-tl-none border shadow-sm text-sm self-start">Hi! I'm the GEICO Assistant. Need help with a quote, claim, or discount?</div>
             </div>
+            <div id="typing-indicator" class="hidden px-4 py-1 text-xs text-slate-400 italic">Gecko is typing...</div>
             <div class="p-4 bg-white border-t flex gap-2">
-                <input type="text" id="chat-input" placeholder="Type here..." class="flex-1 p-2 bg-slate-100 rounded-lg text-sm" onkeypress="if(event.key === 'Enter') sendMessage()">
-                <button onclick="sendMessage()" class="geico-accent text-white px-3 py-1 rounded-lg">Send</button>
+                <input type="text" id="chat-input" placeholder="Type here..." class="flex-1 p-2 bg-slate-100 rounded-lg text-sm focus:outline-none" onkeypress="if(event.key === 'Enter') sendMessage()">
+                <button onclick="sendMessage()" class="geico-accent text-white px-4 rounded-lg font-bold">Send</button>
             </div>
         </div>
     </div>
 
     <script>
         const knowledgeBase = [
-            { keywords: ['claim'], response: "File via the app or call 1-800-841-3000." },
-            { keywords: ['save', 'discount'], response: "We offer Military, Student, and Bundling discounts!" }
+            { keywords: ['claim', 'accident'], response: "You can file a claim instantly via the GEICO Mobile app or by calling 1-800-841-3000." },
+            { keywords: ['discount', 'save'], response: "GEICO offers Military, Student, Federal Employee, and Multi-Policy discounts. Would you like me to check your eligibility?" },
+            { keywords: ['roadside', 'tow', 'flat'], response: "Request Roadside Assistance through our app for the fastest response. We can track the tow truck to your location!" }
         ];
+
         function toggleChat() { document.getElementById('chat-window').classList.toggle('active'); }
+
         function sendMessage() {
             const input = document.getElementById('chat-input');
             const content = document.getElementById('chat-content');
-            if (!input.value.trim()) return;
-            content.innerHTML += `<div class="bg-blue-600 text-white p-3 rounded-2xl self-end text-sm">${input.value}</div>`;
-            const text = input.value.toLowerCase();
+            const typing = document.getElementById('typing-indicator');
+            const text = input.value.trim().toLowerCase();
+
+            if (!text) return;
+
+            content.innerHTML += `<div class="bg-blue-600 text-white p-3 rounded-2xl rounded-tr-none self-end text-sm shadow-sm">${input.value}</div>`;
             input.value = '';
+            content.scrollTop = content.scrollHeight;
+
+            typing.classList.remove('hidden');
+
             setTimeout(() => {
-                let reply = "I can help with that! Would you like to speak to an agent?";
-                knowledgeBase.forEach(item => { if(item.keywords.some(k => text.includes(k))) reply = item.response; });
-                content.innerHTML += `<div class="bg-white p-3 rounded-2xl shadow-sm text-sm"><b>Gecko:</b> ${reply}</div>`;
+                typing.classList.add('hidden');
+                let reply = "I'm not sure about that, but I can connect you with a specialist. Would you like our support number?";
+                knowledgeBase.forEach(item => {
+                    if(item.keywords.some(k => text.includes(k))) reply = item.response;
+                });
+                content.innerHTML += `<div class="bg-white border p-3 rounded-2xl rounded-tl-none shadow-sm text-sm self-start"><b>Gecko:</b> ${reply}</div>`;
                 content.scrollTop = content.scrollHeight;
-            }, 600);
+            }, 1200);
         }
     </script>
 </body>
